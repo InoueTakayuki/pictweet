@@ -3,6 +3,6 @@
     .content_post
       .image_content
         =image_tag "#{tweet.image}",size: "200x200"
-      = simple_format(tweet.text)
+      %p= tweet.text
       %span.name
         =tweet.name
