@@ -1,0 +1,15 @@
+.new_content
+  = form_tag("/tweets",method: :post) do
+    %h3
+      投稿する
+    .name
+      %label name:
+      %input{placeholder:"name", type:"text"}
+    .mail
+      %label image:
+      %input{placeholder:"image", type:"text"}
+    .message
+      %divメッセージ:
+      %textarea{cols:"30",rows:"10",placeholder:"メッセージ", type:"text"}
+    .btn
+      %input{type:"submit",value:"SENT"}
