@@ -1,1 +1,8 @@
-%p hello
+.contents_row
+  -@tweets.each do |tweet|
+    .content_post
+      .image_content
+        =image_tag "#{tweet.image}",size: "200x200"
+      = simple_format(tweet.text)
+      %span.name
+        =tweet.name
