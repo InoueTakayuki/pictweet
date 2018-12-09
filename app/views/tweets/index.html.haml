@@ -1,8 +1,11 @@
-=render modules/login_header
-.contents_row
+-if user_signed_in?
+  =render 'shared/login_header'
+-else
+  =render 'shared/signup_header'
+.contents
   -@tweets.each do |tweet|
-    .content_post
-      .image_content
+    .contents__post
+      .contents__post__image
         =image_tag "#{tweet.image}",size: "200x200"
       %p= tweet.text
       %span.name
